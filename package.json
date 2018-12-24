@@ -1,0 +1,16 @@
+{
+  "name": "tennis_kata",
+  "version": "1.0.0",
+  "main": "TennisGame.js",
+  "license": "MIT",
+  "directories": {
+    "test": "Test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0"
+  }
+}
