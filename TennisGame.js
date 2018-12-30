@@ -33,10 +33,13 @@ class TennisGame {
 
     createScore(pointsFirstPlayer, pointsSecondPlayer) {
         // To initialize a score
-        if (pointsFirstPlayer >=3 && pointsSecondPlayer >=3) this.isDeuceState = true
+        this.isDeuceState = (pointsFirstPlayer >=3 && pointsSecondPlayer >=3)
 
-        if (pointsFirstPlayer >=3 && pointsSecondPlayer >=3
-            && Math.abs(pointsFirstPlayer - pointsSecondPlayer) > 2) {
+        let isAnIncorrectTennisScore = pointsFirstPlayer >=3 && pointsSecondPlayer >=3 
+        && Math.abs(pointsFirstPlayer - pointsSecondPlayer) > 2 // More than 1 point difference during deuce state
+        || (!this.isDeuceState && (pointsFirstPlayer > 4 || pointsSecondPlayer > 4)) // player should have won before
+
+        if (isAnIncorrectTennisScore) {
                 throw new Error('This score cannot exist in a tennis game')
             }
 

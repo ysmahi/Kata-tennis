@@ -84,6 +84,13 @@ describe('TennisGame', function() {
                 tennisGame.createScore(10, 5)
             }).should.throw(Error)
         })
+        
+        it('should not be equal to 5 2', function(){
+            // Game should end before when not on deuce state
+            (function() {
+                tennisGame.createScore(5, 2)
+            }).should.throw(Error)
+        })
     })
 
     describe('Result', function() {
