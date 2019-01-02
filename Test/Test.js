@@ -111,7 +111,7 @@ describe('TennisGame', function() {
               tennisGame.score().should.equal('Player One has won')
           })
           
-          it('should be "second player has won" when 4 points to 2', function() {
+          it('should be "second player has won" when 1 points to 4', function() {
               tennisGame.createScore(1, 4)
 
               tennisGame.score().should.equal('Player Two has won')
